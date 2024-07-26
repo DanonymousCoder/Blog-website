@@ -18,9 +18,9 @@ const addEventOnElements = function(elements, eventType, callback) {
  * MOBILE NAVBAR TOGGLER
  */
 
-const navbar = document.querySelector("[data-navbar]");
+const navBar = document.querySelector("[data-navbar]");
 const navTogglers = document.querySelectorAll("[data-nav-toggler]");
-const toggleNav = () => navbar.classList.toggle("active");
+const toggleNav = () => navBar.classList.toggle("active");
 
 addEventOnElements(navTogglers, "click", toggleNav);
 
@@ -41,3 +41,17 @@ window.addEventListener("scroll", () => {
         header.classList.remove("active");
     }
 });
+
+
+
+
+/**
+ * SLIDER
+ */
+
+const slider = document.querySelector("[data-slider]");
+const sliderContainer = document.querySelector("[data-slider-container]");
+const sliderPrevBtn = document.querySelector("[data-slider-prev]");
+const sliderNextBtn = document.querySelector("[data-slider-next]");
+
+let totalSliderVisibleItems = Number(getComputedStyle(slider).getpropertyValue)
