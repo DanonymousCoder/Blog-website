@@ -178,7 +178,6 @@ body {
   font-size: 1.6rem;
   line-height: var(--lineHeight-4);
   overflow-y: overlay;
-  height: 300vh;
 }
 
 ::-webkit-scrollbar { width: 5px; }
@@ -219,6 +218,67 @@ body {
 .profile-card .profile-banner {
   border-radius: var(--radius-circle);
 }
+
+.headline {
+  color: var(--text-columbia-blue);
+  line-height: var(--lineHeight-1);
+}
+
+.headline-1 {
+  font-size: var(--fontSize-1);
+  color: var(--text-alice-blue);
+  font-weight: var(--weight-extraBold);
+}
+
+.headline-2 {
+  font-size: var(--fontSize-2);
+}
+
+.headline-3 {
+  font-size: var(--fontSize-2);
+  line-height: var(--lineHeight-2);
+}
+
+.section-title {
+  margin-block-end: 10px;
+}
+
+.headline .span {
+  background-color: var(--gradient-1);
+  display: inline-block;
+  --webkit-text-fill-color: transparent;
+  --webkit-background-clip: text;
+}
+
+.btn {
+  background-color: var(--gradient-2);
+  background-size: 200%;
+  background-position: left;
+  color: var(--white);
+  font-size: var(--fontSize-6);
+  font-weight: var(--weight-bold);
+  max-width: max-content;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  transition: var(--transition-1);
+}
+
+.btn:is(:hover, :focus-visible) {
+  background-position: right;
+}
+
+.btn-primary {
+  padding: 8px 16px;
+  border-radius: var(--radius-6);
+}
+
+.btn-primary {
+  padding: 10px 30px;
+  border-radius: var(--radius-pill);
+}
+
+.w-100 { width: 100; }
 
 
 /*-----------------------------------*\
@@ -343,6 +403,7 @@ body {
   #HERO
 \*-----------------------------------*/
 
+.hero { padding-block-start: calc(var(--section-padding) + 160px); }
 
 
 
