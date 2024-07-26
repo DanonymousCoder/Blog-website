@@ -122,6 +122,7 @@
 \*-----------------------------------*/
 
 
+
 *,
 *::before,
 *::after {
@@ -187,6 +188,7 @@ body {
 ::-webkit-scrollbar-thumb {
   background-color: var(--bg-carolina-blue);
   border-radius: var(--radius-pill);
+
 }
 
 
@@ -195,14 +197,54 @@ body {
 \*-----------------------------------*/
 
 
+.container {
+  padding-inline: 16px;
+}
 
+.hover-1,
+.hover-2 {
+  transition: var(--transition-1);
+}
+
+.hover-1:is(:hover, :focus-visible) {
+  color: var(--text-carolina-blue);
+}
+
+.profile-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-card .profile-banner {
+  border-radius: var(--radius-circle);
+}
 
 
 /*-----------------------------------*\
   #HEADER
 \*-----------------------------------*/
 
+.navbar,
+.header .btn {
+  display: none;
+}
 
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-block: 24px;
+  background-color: var(--bg-oxford-blue);
+  z-index: 4;
+}
+
+.header.active {
+  padding-block: 8px;
+  box-shadow: var(--shadow-1);
+  border-block-end: 1px solid var(--bg-prussian-blue);
+}
 
 
 
