@@ -96,3 +96,13 @@ const slidePrev = function () {
 }
 
 sliderPrevBtn.addEventListener("click", slidePrev);
+
+/**
+ * RESPONSIVE
+ */
+window.addEventListener("resize", function () {
+    totalSliderVisibleItems = Number(getComputedStyle(slider).getpropertyValue("-slider-items"));
+    totalSlidableItems = sliderContainer.childElementCount - totalSliderVisibleItems;
+
+    moveSliderItem();
+})
