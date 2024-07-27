@@ -1010,8 +1010,34 @@ body.nav-active {
   #BACK TO TOP
 \*-----------------------------------*/
 
+.back-top-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: var(--bg-prussian-blue);
+  color: var(--white);
+  display: grid;
+  place-items: center;
+  border-radius: var(--radius-circle);
+  border: 3px solid var(--bg-carolina-blue);
+  transition: var(--transition-1);
+  visibility: hidden;
+  opacity: 0;
+  z-index: 4;
+}
+
+.back-top-btn:is(:hover, :focus-visible) {
+  box-shadow: var(--shadow-2);
+}
 
 
+.back-top-btn.active {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(-10px);
+}
 
 
 /*-----------------------------------*\
@@ -1023,3 +1049,64 @@ body.nav-active {
         overflow-y: overlay;
     }
 }
+
+/**
+ *  responsive for large than 575px screen
+ */
+
+ @media (min-width: 575px) {
+    /**
+    *  CUSTOM PROPERTY
+    */
+
+    :root {
+      
+      /**
+      *  typography
+      */
+
+      /* font style */
+      --fontSize-1: 4.4rem;
+      --fontSize-2: 3.5rem;
+
+      /**
+        *  spacing
+        */
+
+        --section-padding: 100px;
+    }
+
+     /**
+      *  REUSED STYLE
+      */
+
+      .container {
+        max-width: 540px;
+        width: 100%;
+        margin-inline: auto;
+      }
+
+      .headline-3 {
+        --fontSize-2: 2.4rem;
+      }
+
+
+
+      /**
+      *  HEADER
+      */
+
+      .header .btn {
+        display: block;
+        margin-inline-start: auto;
+      }
+
+      .header.header.active {
+        padding-block: 20px;
+      }
+
+      /**
+      *  HERO
+      */
+
+ }
