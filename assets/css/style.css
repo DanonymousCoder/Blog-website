@@ -280,7 +280,7 @@ body.nav-active {
 
 
 .btn-secondary {
-  padding: 10px 30px;
+  padding: 18px 30px;
   border-radius: var(--radius-pill);
 }
 
@@ -769,7 +769,8 @@ body.nav-active {
   transition: var(--transition-1);
 }
 
-.recent-post-card .card-badge:is(:hover, :focus-visible) {
+.recent-post-card .card-badge:is(:hover, :focus-visible),
+.pagination-btn:is(:hover, :focus-visible) {
   transform: translateY(-2px);
   background-color: var(--bg-carolina-blue);
 }
@@ -781,6 +782,54 @@ body.nav-active {
 .recent-post-card .card-tag {
   gap: 15px;
   color: var(--text-slate-gray);
+}
+
+.recent-post-card .card-wrapper ion-icon {
+  font-size: 1.8rem;
+  --ionicon-stroke-width: 40px;
+}
+
+.pagination-btn {
+  background-color: var(--bg-prussian-blue);
+  color: var(--text-white);
+  font-weight: var(--weight-bold);
+  line-height: 1;
+  width: 35px;
+  height: 35px;
+  display: grid;
+  place-items: center;
+  border-radius: var(--radius-circle);
+  transition: var(--transition-1);
+}
+
+.pagination {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+  margin-block-start: 60px;
+}
+
+.aside-card {
+  padding: 25px;
+  border-radius: var(--radius-16);
+}
+
+.aside-title {
+  margin-block-end: 40px;
+}
+
+.aside-title .span {
+  position: relative;
+}
+
+.aside-title .span::after {
+  content: "";
+  display: block;
+  width: 96px;
+  height: 3px;
+  background-color: var(--bg-carolina-blue);
+  margin-block-start: 10px;
 }
 
 
