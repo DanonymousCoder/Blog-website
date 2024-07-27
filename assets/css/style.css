@@ -180,6 +180,10 @@ body {
   overflow-y: overlay;
 }
 
+body.nav-active {
+  overflow: hidden;
+}
+
 ::-webkit-scrollbar { width: 5px; }
 
 ::-webkit-scrollbar-track { background-color: transparent; }
@@ -268,14 +272,14 @@ body {
   background-position: right;
 }
 
-/*
+
 .btn-primary {
   padding: 8px 16px;
   border-radius: var(--radius-6);
 }
-*/
 
-.btn-primary {
+
+.btn-secondary {
   padding: 10px 30px;
   border-radius: var(--radius-pill);
 }
@@ -378,7 +382,7 @@ body {
 .navbar {
   position: absolute;
   top: 0;
-  right: 340px;
+  right: -340px;
   width: 100%;
   background-color: var(--bg-oxford-blue-2);
   padding: 30px;
@@ -634,6 +638,12 @@ body {
 
 .feature-bg { display: none; }
 
+.feature-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
 .feature-card {
   padding: 20px;
   border-radius: var(--radius-16);
@@ -728,7 +738,50 @@ body {
   #RECENT POST
 \*-----------------------------------*/
 
+.recent-post .container {
+  display: grid;
+  gap: 50px;
+}
 
+.recent-post-card .card-banner {
+  border-radius: var(--radius-16);
+  transition: var(--transition-1);
+}
+
+.recent-post-card:is(:hover, :focus-within) .card-banner {
+  transform: translateY(-2px);
+}
+
+.recent-post-card .card-text {
+  color: var(--text-wild-blue-yonder);
+  font-size: var(--fontSize-6);
+  line-height: var(--lineHeight-1);
+}
+
+.recent-post-card .card-badge {
+  background-color: var(--border-prussian-blue);
+  max-width: max-content;
+  color: var(--text-white);
+  font-size: var(--fontSize-8);
+  font-weight: var(--weight-bold);
+  padding: 4px 15px;
+  border-radius: var(--radius-pill);
+  transition: var(--transition-1);
+}
+
+.recent-post-card .card-badge:is(:hover, :focus-visible) {
+  transform: translateY(-2px);
+  background-color: var(--bg-carolina-blue);
+}
+
+.recent-post-card .card-title {
+  margin-block: 15px 20px;
+}
+
+.recent-post-card .card-tag {
+  gap: 15px;
+  color: var(--text-slate-gray);
+}
 
 
 
