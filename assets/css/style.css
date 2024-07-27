@@ -386,6 +386,12 @@ body {
   transition: 0.25s --cubic-in;
 }
 
+.navbar,
+.navbar.active {
+  all: unset;
+  display: block;
+}
+
 .navbar.active {
   transform: translateX(-340px);
   visibility: visible;
@@ -720,3 +726,9 @@ body {
 /*-----------------------------------*\
   #MEDIA QUERIES
 \*-----------------------------------*/
+
+@media (min-width: 1200px) {
+    body.nav-active {
+        overflow-y: overlay;
+    }
+}
