@@ -1050,8 +1050,10 @@ body.nav-active {
     }
 }
 
+
+
 /**
- *  responsive for large than 575px screen
+ *  responsive for large than 5758px screen
  */
 
  @media (min-width: 575px) {
@@ -1065,7 +1067,7 @@ body.nav-active {
       *  typography
       */
 
-      /* font style */
+      /* font size */
       --fontSize-1: 4.4rem;
       --fontSize-2: 3.5rem;
 
@@ -1182,6 +1184,103 @@ body.nav-active {
         grid-template-columns: 0.5fr 1fr;
         gap: 20px;
       }
+
+      .pagination-btn {
+        width: 42px;
+        height: 42px;
+      }
+
+
+
+      /**
+      *  ASIDE
+      */
+
+      .aside-title {
+        --fontSize-2: 2rem;
+      }
+      
+
+
+ }
+
+
+
+
+ /**
+ *  responsive for large than 768px screen
+ */
+
+ @media (min-width: 768px) {
+
+  /**
+    *  CUSTOM PROPERTY
+    */
+
+    :root {
+      
+      /**
+      *  typography
+      */
+
+      /* font size */
+      --fontSize-1: 6.4rem;
+      --fontSize-2: 4.5rem;
+
+    }
+
+
+    /**
+    *  REUSED STYLE
+    */
+
+    .container {
+      max-width: 720px;
+    }
+
+
+
+    /**
+    *  RECENT POST
+    */
+
+    .recent-post-card {
+      grid-template-columns: 0.7fr 1fr;
+    }
+
+ }
+
+
+
+
+  /**
+ *  responsive for large than 992px screen
+ */
+
+ @media (min-width: 992px)  {
+   
+   /**
+    *  REUSED STYLE
+    */
+
+    .container {
+      max-width: 930px;
+    }
+
+
+
+   /**
+  *  HERO
+  */
+
+  .hero {
+    padding-block-start: calc(va(--section-padding) + 80px);
+  }
+
+  .hero .container {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
 
 
  }
